@@ -76,4 +76,40 @@ Elizabeth~A Goldschmidt, Matthew~D Eisaman, Jingyun Fan, Sergey~V Polyakov, and
   source.
 \newblock {\em Physical Review A}, 78(1):013844, 2008.
 
+\bibitem{pan2019elucidating}
+Feng Pan, Kevin~C Smith, Hoang~L Nguyen, Kassandra~A Knapper, David~J Masiello,
+  and Randall~H Goldsmith.
+\newblock Elucidating energy pathways through simultaneous measurement of
+  absorption and transmission in a coupled plasmonic--photonic cavity.
+\newblock {\em Nano Letters}, 20(1):50--58, 2019.
+
+\bibitem{qin2010design}
+Fei Qin, Ye~Liu, Zi-Ming Meng, and Zhi-Yuan Li.
+\newblock Design of kerr-effect sensitive microcavity in nonlinear photonic
+  crystal slabs for all-optical switching.
+\newblock {\em Journal of Applied Physics}, 108(5):053108, 2010.
+
+\bibitem{liu200910}
+Ye~Liu, Fei Qin, Zhi-Yi Wei, Qing-Bo Meng, Dao-Zhong Zhang, and Zhi-Yuan Li.
+\newblock 10 fs ultrafast all-optical switching in polystyrene nonlinear
+  photonic crystals.
+\newblock {\em Applied Physics Letters}, 95(13):131116, 2009.
+
+\bibitem{krausz1989optical}
+F~Krausz, E~Wintner, and G~Leising.
+\newblock Optical third-harmonic generation in polyacetylene.
+\newblock {\em Physical Review B}, 39(6):3701, 1989.
+
+\bibitem{wong1991studies}
+KS~Wong, SG~Han, and ZV~Vardeny.
+\newblock Studies of resonant and preresonant femtosecond degenerate four-wave
+  mixing in unoriented conducting polymers.
+\newblock {\em Journal of applied physics}, 70(3):1896--1898, 1991.
+
+\bibitem{spillane2002ultralow}
+SM~Spillane, TJ~Kippenberg, and KJ~Vahala.
+\newblock Ultralow-threshold raman laser using a spherical dielectric
+  microcavity.
+\newblock {\em Nature}, 415(6872):621--623, 2002.
+
 \end{thebibliography}
