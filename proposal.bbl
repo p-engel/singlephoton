@@ -112,4 +112,43 @@ SM~Spillane, TJ~Kippenberg, and KJ~Vahala.
   microcavity.
 \newblock {\em Nature}, 415(6872):621--623, 2002.
 
+\bibitem{scully1999quantum}
+Marlan~O Scully and M~Suhail Zubairy.
+\newblock Quantum optics, 1999.
+
+\bibitem{tannoudji1992atom}
+Claude~Cohen Tannoudji, Gilbert Grynberg, and J~Dupont-Roe.
+\newblock Atom-photon interactions, 1992.
+
+\bibitem{finkelstein2015fano}
+Daniel Finkelstein-Shapiro, Ines Urdaneta, Monica Calatayud, Osman Atabek,
+  Vladimiro Mujica, and Arne Keller.
+\newblock Fano-liouville spectral signatures in open quantum systems.
+\newblock {\em Physical Review Letters}, 115(11):113006, 2015.
+
+\bibitem{finkelstein2016nonlinear}
+Daniel Finkelstein-Shapiro, Monica Calatayud, Osman Atabek, Vladimiro Mujica,
+  and Arne Keller.
+\newblock Nonlinear fano interferences in open quantum systems: An exactly
+  solvable model.
+\newblock {\em Physical Review A}, 93(6):063414, 2016.
+
+\bibitem{fano1961effects}
+Ugo Fano.
+\newblock Effects of configuration interaction on intensities and phase shifts.
+\newblock {\em Physical Review}, 124(6):1866, 1961.
+
+\bibitem{jackson1999classical}
+John~David Jackson.
+\newblock Classical electrodynamics, 1999.
+
+\bibitem{butcher1990elements}
+Paul~N Butcher and David Cotter.
+\newblock The elements of nonlinear optics, 1990.
+
+\bibitem{thakkar2015quantum}
+Niket Thakkar, Charles Cherqui, and David~J Masiello.
+\newblock Quantum beats from entangled localized surface plasmons.
+\newblock {\em ACS Photonics}, 2(1):157--164, 2015.
+
 \end{thebibliography}

@@ -81,6 +81,218 @@ anti-resonant dip aligned with the pump laser. We set out to calculate the secon
 correlation function of such single- and two-photon states of the proposed nonlinear 
 cavity-emitter system.
 
+We develop the system's dynamics in Heisenberg picture. Heisenberg picture is 
+suitable to calculate the quantum statistical correlation of the field of light 
+transmitted throught the kerr cavity. This field correlation can be related to 
+the experimentally observed spectral distribution, using the spectral response 
+function. \cite{scully1999quantum} Moreover, in the Heisenberg picture the 
+dynamics of the quantum transverse field is analogous to the classical 
+transverse field \cite{tannoudji1992atom}, which allows for direct comparison 
+to the classical system. \cite{pan2019elucidating} Then damping of the 
+single-mode in the cavity field (and of the broad-band field) is described 
+using Heisenberg-Langevin formalism. In so doing, this model provides a simple 
+yet rigorous quantum approach (complementing the Louivillian formalism in the
+Linblad form, recently developed in Ref. \cite{finkelstein2015fano, 
+finkelstein2016nonlinear}) to account for damping of the discrete state 
+(cavity mode) of Fano resonance, and the spectral distribution derived from 
+this model is expressed in terms of Fano-parameters. \cite{fano1961effects}
+
+
+\subsection{Model}
+The Hamiltonian of the discrete kerr-cavity coupled to a broad-band emitter is
+the following $\mathcal{H} = \mathcal{H}_{a} + \mathcal{H}_{b} + 
+\mathcal{H}_{f} + \mathcal{H}_{I}$. The derived Hamiltonian $\mathcal{H}_{a}$ 
+is the energy of a single-mode dielectric kerr-cavity in free space 
+\cite{jackson1999classical}, such that,
+\begin{equation}
+\begin{split}
+\mathcal{H}_{a} &= \frac{1}{2} 
+    \int_{V} \mathrm{d}^{3}\mathbf{x} \: \mathbf{P} \cdot \mathbf{E}
+\\
+&= \frac{1}{2} 
+    \int_{V} \: \mathrm{d}^{3}\mathbf{x} (\mathbf{P}^{(1)} + \mathbf{P}^{(3)})
+    \cdot \mathbf{E}
+\\
+&= \frac{1}{2} 
+    \int_{V} \: \mathrm{d}^{3}\mathbf{x} \: 4\pi 
+    (\mathbf{\chi}^{(1)} + 
+    \frac{3}{4}\mathbf{\chi}^{(3)}:\mathbf{E}\mathbf{E}^{*})
+    \times \mathbf{E} \cdot \mathbf{E}
+\end{split}
+\end{equation}
+where $3/4\mathbf{\chi}^{(3)}$ is the higher order non-linear suceptibility of
+a kerr-cavity \cite{butcher1990elements}, and the quantized field $\mathbf{E}$
+is normalized with respect to the cavity's mode volume $V$. In the rotating
+wave approximation (and for a linear polarization), $\mathcal{H}_{a}$
+simplifies as follows
+\begin{equation}
+\begin{split}
+\mathcal{H}_{a} &= \hbar\omega_k 4\pi^{2} \Big(
+    \mathbf{\chi}^{(1)}_{ef} +
+    \frac{3}{4} \mathbf{\chi}^{(3)}_{ef} \mathcal{E}^2
+    \mathbf{a}^{\dagger}\mathbf{a} \Big)
+    \times \Big( \mathbf{a}^{\dagger}\mathbf{a} + \frac{1}{2} \Big)
+\\
+&= \hbar( \omega_c + U\mathbf{a}^{\dagger}\mathbf{a} )
+    \times \Big( \mathbf{a}^{\dagger}\mathbf{a} + \frac{1}{2} \Big)
+\\  
+&\approx \hbar( \omega_c + U < \mathbf{a}^{\dagger}\mathbf{a}> )
+    \times \Big( \mathbf{a}^{\dagger}\mathbf{a} + \frac{1}{2} \Big).
+\end{split}
+\end{equation}
+where $\mathcal{E} = \sqrt{2\pi \hbar \omega_k / V }$ is the amplitude of the
+quantized field.
+
+The first-order approximation in Eq. (5) linearizes the non-linear term.
+This is based on the motivation that the resonant frequency of a kerr-cavity
+changes as a function of intesity $|\mathbf{E}|^2$. In this case, the resonant
+frequency depends on the average photon-number in the kerr-cavity
+\begin{equation}
+\omega_c^{NL}( N_c =<\mathbf{a}^{\dagger}\mathbf{a}> )  = \omega_c + UN_c.
+\end{equation}
+Thus the Hamilonian for the single-mode kerr-cavity $\mathcal{H}_a$, the 
+bosonic broad-band field $\mathcal{H}_b$, and the free field $\mathcal{H}_f$
+is as follows
+\begin{align}
+\mathcal{H}_a &= \hbar\omega_c^{NL}
+    \Big( \mathbf{a}^{\dagger}\mathbf{a} + \frac{1}{2} \Big),
+\\
+\mathcal{H}_b &= \hbar\omega_p
+    \Big( \mathbf{b}^{\dagger}\mathbf{b} + \frac{1}{2} \Big),
+\\
+\mathcal{H}_f &= \hbar \sum_j \omega_j
+    \Big( \mathbf{f}^{\dagger}_j\mathbf{f}_j + \frac{1}{2} \Big),
+\end{align}
+The discrete cavity mode $\omega_c^{NL}$ and the broad-band mode $\omega_p$
+both disipate energy to the free fields $\omega_k$. Thus the interaction
+Hamiltonian $\mathcal{H}_{I}$ is as follows
+\begin{equation}
+\mathcal{H}_I = \hbar g (
+    \mathbf{a}^{\dagger}\mathbf{b} + \mathbf{b}^{\dagger}\mathbf{a} )
+    + \hbar \sum_j ( V_j^a \mathbf{f}^{\dagger}_j\mathbf{a} 
+        + V_j^b \mathbf{f}^{\dagger}_j\mathbf{b} + \mathrm{h.c.} ).
+\end{equation}
+We work in the purcell regime where $|V_a| \ll g \ll |V_b|$. Note that the
+original Fano problem is the limit where $|V_a| \rightarrow 0$.
+
+Deriving the Heisenberg-Langevin equation of motion for the slowly varying
+operator $\mathbf{A} = \mathbf{a}e^{i\omega_c^{NL} t}$, and then 
+transforming back to the non-slowly varying operator $\mathbf{a} = 
+\mathbf{A}e^{-i\omega_c^{NL} t}$ yields
+\begin{align}
+\dot{ \mathbf{a} } &= -i ( \omega_c^{NL} - i\gamma_c/2 )\mathbf{a} 
+    - ig\mathbf{b},
+\\
+\dot{ \mathbf{b} } &= -i ( \omega_p - i\gamma_p/2 )\mathbf{b}
+    - ig\mathbf{a},
+\end{align}
+$\gamma_{c,p}$ accounts for both radiative and non-radiative damping as
+described in Ref \cite{thakkar2015quantum}. (Note that the above equation
+has assumed an evacuated initail reservoir state.)
+
+In the experiment, the broad-band mode is driven by the external
+field of a monochromatic laser operating at $\omega$. The spectral 
+distribution is derived from the spectral response function, such that,
+\begin{equation}
+S(\omega) = \frac{1}{\pi} \int_0^{\infty} \mathrm{d}\tau \: 
+    e^{i \omega \tau} 
+    <\mathbf{b}^{\dagger}(t_0=0) \: \mathbf{b}(t_0 + \tau)>.
+\end{equation}
+We find that the spectral reponse function can be interpreted as the steady 
+state solution of the average photon-number in the broad-band mode rotating 
+in the frame of a drive frequency, i.e.
+\begin{align}
+S(\omega) &= < \tilde{ \mathbf{b} }^{\dagger}_{ss}\tilde{ \mathbf{b} }_{ss} >
+\\
+\tilde{ \mathbf{b} }^{\dagger}_{ss} &= 
+    \mathbf{b}^{\dagger}_{ss} \: e^{i \omega_L t}; \quad
+    \tilde{ \mathbf{a} }^{\dagger}_{ss} =
+    \mathbf{a}^{\dagger}_{ss} \: e^{i \omega_L t};
+\\
+\dot{ \mathbf{b} }_{ss} &= 0 =
+    -i ( \omega_p - i\gamma_p/2 )\mathbf{b}_{ss} - ig\mathbf{a}_{ss}
+    + iE_{drive}( e^{i \omega_L t} - e^{-i \omega_L t} ).
+\end{align}
+and $E_{drive}$ is the amplitude of the monochromatic laser operating at
+a drive frequency $\omega = \omega_L$. The reduced spectral response yields
+\begin{equation}
+\begin{split}
+\frac{ S(\omega = \omega_L) }{ S(\omega = \omega_L)_{g=0} } &= 
+    \frac{< \tilde{ \mathbf{b} }^{\dagger}_{ss}\tilde{ \mathbf{b} }_{ss} >}
+        {<\tilde{ \mathbf{b} }^{\dagger}_{ss}\tilde{ \mathbf{b} }_{ss} >}_{g=0}
+\\
+&= \Bigg( 1 +
+    \frac{\gamma_c}{\gamma_p}
+    \frac{g^2}{(\omega_L - \omega_c^{NL})^2 + (\gamma_c/2)^2}
+    \Bigg) \:
+    \bigg| \frac{q + \epsilon}{\epsilon + i} \bigg|.
+\end{split}
+\end{equation}
+The first term is the Fano profile, where 
+$\epsilon=(\omega_L - \omega_{eff})/(\gamma_{eff}/2)$ and 
+$q = (\omega_c^{NL} - i\gamma_c/2 - \omega_{eff})/(\gamma_{eff}/2)$;
+$\omega_{eff}$, $\gamma_{eff}$, and $q$ are the Fano parameters. The second
+term is the Lorentz distribution due to the line-width broadening of the
+discrete state. The spectral distribution reduces to the Fano profile in the
+limit $\gamma_c \propto |V_a| \rightarrow 0$.
+
+Since we are interested in single-photon blockade due to the kerr 
+non-linearity, $U \propto \chi_{eff}^{(3)}$, we calculate the second order
+correlation function $g^{(2)}$ of light transmitted through the kerr-cavity
+coupled to the driven broad-band emitter, at the steady state, as a function
+of U, i.e.,
+\begin{equation}
+\begin{split}
+g^{(2)} &\equiv 
+    \frac{<n_a, n_b | \:
+    \tilde{ \mathbf{a} }^{\dagger}_0 \tilde{ \mathbf{a} }^{\dagger}_{ss}
+    \tilde{ \mathbf{a} }_{ss} \tilde{ \mathbf{a} }_0 \: |
+    n_a, n_b>}
+    {(<\tilde{ \mathbf{a} }^{\dagger}_0\tilde{ \mathbf{a} }_0 >)^2}
+\\
+&= \frac{n_a <n_a - 1, n_b | \:
+    \tilde{ \mathbf{a} }^{\dagger}_{ss}\tilde{ \mathbf{a} }_{ss} \: |
+    n_a - 1, n_b>}
+    {n_a^2}
+\\
+&= \frac{1}{n_a} 
+    \frac{g^2}
+    {\big| \omega_L - \omega_c^{NL}(N_c=1) + i\gamma_c/2 \big|^2}
+    <n_a - 1, n_b | \:
+    \tilde{ \mathbf{b} }^{\dagger}_{ss}\tilde{ \mathbf{b} }_{ss} \: |
+    n_a - 1, n_b>
+\\
+&= \frac{g^2}{n_a}
+    \frac{E_{drive}^2}
+    {\big| \big( \omega_L - \omega_c^{NL}(N_c=1) + i\gamma_c/2 \big)
+    \big( \omega_L - \omega_p + i\gamma_p/2 \big)
+    -g^2 \big|^2}.
+\end{split}
+\end{equation}
+For single-photon blockade, the photon-number in the cavity is set to one, such
+that, $\omega_c^{NL}( N_c = 1 )  = \omega_c + U$, and the amplitude of the
+drive field to populate the cavity mode with a single photon is such that
+\begin{equation}
+\begin{split}
+<n_a = 1 | \:
+    \tilde{ \mathbf{a} }^{\dagger}_{ss} \tilde{ \mathbf{a} }_{ss} \: |
+    n_a = 1>
+    &= 1
+\\
+&= \frac{g^2 \: E_{drive}^2}
+    {\big| \big( \omega_L - \omega_c^{NL}(N_c=0) + i\gamma_c/2 \big)
+    \big( \omega_L - \omega_p + i\gamma_p/2 \big)
+    -g^2 \big|^2}.
+\end{split}
+\end{equation}
+Thus to popoulate the cavity with a single-photon occupation at steady state,
+and with a resonant drive $(i.e., \omega_L = \omega_c)$, then 
+\begin{equation}
+E_{drive} =
+\big| ( i\gamma_c/2 )( \omega_c - \omega_p + i\gamma_p/2 ) -g^2 \big| / g.
+\end{equation}
+
+
 \subsection{Analysis}
 The two-photon blockade effect depends on the Fano resonance shift induced by the kerr 
 cavity. The system is designed such that a monochromatic pump laser aligns with the 
@@ -126,7 +338,8 @@ shifted by $\Delta\lambda \approx $. This value serves as an upper bound since t
 fano-lineshape has a narrow line-width on the order of an attometer. This is advantageous
 because the desired blockade effect could be achieved for a kerr-cavity with a much 
 smaller third order suceptibily and a faint laser beam (whose coherent state could have 
-an average photon-number in range $\mu = 1-4$).
+an average photon-number in the range $\mu = 1-4$).
+
 
 \newpage
 \bibliography{ref_database}
