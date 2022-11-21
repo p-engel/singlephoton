@@ -8,7 +8,9 @@
 
 \begin{document}
 
-\title{PhD Candidacy Exam Proposal:}
+\title{PhD Candidacy Proposal: \\
+A Strategy for the Creation of a Single Photon Using a Kerr-Cavity Weakly
+Coupled to Quantum Emitters}
 \author{c praise anyanwu \\
     Chemistry Department, University of Washington
     \thanks{anyanc@uw.edu} }
@@ -16,44 +18,53 @@
 \maketitle
 
 \newpage
-\section{A Single Photon Source Enabled by Fano Interference between a
-Broadband Emitter and a High Q, Kerr Cavity}
+\section{Introduction}
+Since photons travel at the speed of light and interact weakly with the
+environment over long distances, enconding infromation in the quanutm state of
+a single photon (using degrees of freedom of polarization, momentum, or energy)
+is highly desirable in secure quantum communication application.
+\cite{gisin2002quantum, bennett2004quantum} For example, in the quatum key 
+distribution protocol, Alice encodes an information in the quibit of a photon 
+polarization state. \cite{bennett1984proceedings, bennett1992quantum}
+Importantly, if Alice must securely transmit this quibit through a quantum channel 
+to Bob, and without loss of information to an eavesdropper, then Alice's 
+single-photon source must be deterministic. A deterministic single-photon 
+source emits a single photon \textit{on demand}, with $100 \: \%$ probability. 
+In practice, one evaluates the single-photon nature of a source by the ratio of 
+the probability of single-photon to multi-photon emission. \cite{lounis2005single}
 
-\subsection{Introduction}
-Single photon sources play a prominent role in the field of quantum information 
-science. \cite{gisin2002quantum, bennett2004quantum} In the QKD protocol, Alice encodes 
-an information, for example, in the quibit of a photon polarization state. If Alice must 
-securely transmit this quibit through a quantum channel to Bob, the reciever, then 
-Alice's single photon source must be deterministic. In a case where Alice generates a 
-probalistic two-photon state, then Eve, the eavesdropper, can glean information from one 
-of the two photons (unbeknownst to Alice) while the second photon is transmitted to Bob. 
-\cite{bennett1984proceedings, bennett1992quantum} Moreover, since photons travel at the 
-speed of light and interact weakly with the environment over long distances, enconding 
-infromation in the quanutm state of a single photon (using degrees of freedom of 
-polarization, momentum, or energy) is hihgly compatible and thus desirable in 
-quantum communication application.
-
-A deterministic single-photon source that emits a single photon \textit{on demand}, 
-with $100 \: \%$ probability, is ideal. In practice, one evaluates the 
-single-photon nature of a source by the ratio of the probability of single-photon 
-to multi-photon emission, and thus single-photon sources lie on a spectrum of 
-two main classes: deterministic and probabilistic sources. \cite{lounis2005single, 
-eisaman2011invited} The former involves effective two level systems (quantum
-dots, single atoms, single ions) \cite{ShieldsAndrewJ2007Sqls, strauf2007high, 
-hennrich2004photon, wilk2007single, maurer2004single} that emit a single photon when 
-excited by a resonant incident field; the latter involves, for example, parametric 
-down conversion in waveguides (or four-wave mixing in optical fiber) systems
+Single-photon sources lie on a spectrum of two main classes.
+\cite{lounis2005single, eisaman2011invited} The former lies towards a
+deterministic source. It involves effective two level systems (quantum dots, 
+single atoms, single ions) \cite{ShieldsAndrewJ2007Sqls, strauf2007high, 
+hennrich2004photon, wilk2007single, maurer2004single} that emit a single photon 
+when excited by a resonant incident field. The latter sources are less 
+deterministic and involve such processes as parametric down conversion in 
+waveguides, or four-wave mixing in optical fiber systems 
 \cite{u2004efficient, sharping2001observation, goldschmidt2008spectrally} 
 that emit a correlated pair of photons, where one photon heralds the other. 
-The known difficulties with these systems involve trapping of a single ion or atom 
-strongly coupled to cavities at cryogenic temperatures for deterministic single-photon 
-sources, and care must be taken with the probabilistic sources to avoid generating 
-multiple pairs of photons. Herein, we propose a theoretical basis for a novel system that 
-circumvents ion trapping at ultra-cold temperatures, and this system is operative in the 
-Purcell regime; then we calculate the second order correlation function as a measure of 
-its single-photon nature.
+The known difficulties with these systems include trapping of a single ion or 
+atom strongly coupled to cavities at cryogenic temperatures for deterministic 
+single-photon sources, while care must be taken with the less deterministic 
+sources in order to avoid generating multiple pairs of photons. Herein, 
+we propose a theoretical basis for a novel single-photon source that circumvents 
+ion-trapping at ultra-cold temperatures, and this system is operative in the 
+Purcell regime; then we calculate the second order correlation function as 
+a measure of its single-photon nature.
 
-\begin{figure}[H]
+Consider the following system: a high-Q cavity coupled to a broad-band emitter.
+For example, ref \cite{pan2019elucidating} has an emitter placed on the chip of 
+a torodial silica based microcavity with a $10^{7}$ Q-factor (Fig. 1a). 
+We propose the following modification: a quantum emitter placed on a 
+kerr-cavity coated with polystyrene, which has a significant 
+$10^{- 12} \:\mathrm{cm}^2/\mathrm{W}$ third-order nonlinear susceptibility.
+\cite{qin2010design, liu200910} (Polystyrene's third-order nonlinearity 
+originates from the delocalization of the $\pi$-conjugated electrons along the 
+polymer chains. \cite{krausz1989optical, wong1991studies}) This achieves a kerr 
+effect such that the resonance of the nonlinear cavity now depends on the 
+photon-number in the cavity (Fig. 1b).
+
+\begin{figure}[]
   \centering
   \includegraphics[width=1\linewidth]{fig.pdf}
   \caption{(a) Example of the proposed experimental set-up
@@ -79,38 +90,56 @@ its single-photon nature.
   \label{fig}
 \end{figure}
 
-Consider the following system: a high-quality cavity coupled to a broadband emitter. 
-For example, ref \cite{pan2019elucidating} has a near sub-diffraction plasmon nanorod 
-placed on the chip of a torodial silicon based microcavity, with a $10^{7}$ Q-factor. 
-The absorbtion crossection of the excited plasmon nanorod yields a Fano-lineshape slighly 
-shifted about the resonace of the isolated mode of the microcavity. This Fano resonance 
-is indicative of a hybrid mode of the hybridized plasmonic-photonic system. Moreover, 
-not only is this system operative at room temperature, it is capable of measuring 
-attometer shifts in the resonances of the microcavity modes. We propose the following 
-modification: coating the cavity with polystyrene, which has a large third-order nonlinear susceptibility on the order of $10^{−12} \:\mathrm{cm}^2/\mathrm{W}$. 
-\cite{qin2010design, liu200910}. (Polystyrene's third-order nonlinearity originates 
-from the delocalization of the $\pi$-conjugated electrons along the polymer chains. 
-\cite{krausz1989optical, wong1991studies}) This achieves a kerr effect such that 
-transmission of a photon from the pump laser (through the plasmon) to the cavity would 
-result in the shift of the cavity's resonance (see figure). Thus the resonance of the 
-nonlinear cavity now depends on the photon-number in the cavity.
+A characteristic of the coupled kerr-cavity-emitter system is the cavity 
+photon-number dependent Fano resonance, with a sharp resonant peak and 
+anti-resonant dip corresponding to an enhanced and diminished absorption by the
+emitter (see Fig. 1b). Just at the vicinity of the  anti-resonance, there is a 
+transmision of photon into the cavity. Upon single-photon population, the
+kerr-cavity resonance is detuned from a pump laser exciting the system at the
+anti-resonance. And if the kerr-cavity resonant frequency shift is on the order 
+$\Gamma$ (the FWHM equal to the line-width between the anti-resonant dip and 
+the resonant peak of the Fano Profile), then the system experiences a 
+single-photon blockade, as shown in the calculated $g^{(2)}$ (Fig. 1c) of light 
+transmitted through the cavity. Thus the single-photon blockade effect depends 
+on the Fano resonance shift $\Delta\omega$ induced by the Kerr-cavity's 
+non-linearity, and the degree of nonlinearity is proportional to $\Gamma$, 
+such that,
+\begin{equation}
+\begin{split}
+\omega_1 - \omega_0 &= (\omega_0 + \Gamma ) - \omega_0
+\\
+\Delta\omega &= \Gamma
+\end{split}
+\end{equation}
+where $\omega_{0,1} = c n_{0,1} k$, and $n_1$ is the refractive index due
+to the kerr effect \cite{spillane2002ultralow}:
+\begin{equation}
+\begin{split}
+n_1 &= n_0 + n_2 I
+\\
+&= n_0 + \frac{3 \chi^{(3)}}{8 n_0 c\epsilon_0} I.
+\end{split}
+\end{equation}
+Note that $n_2$ is the value often reported for the third-order suceptibility,
+and the kerr effect is induced by the local intensity $I$ from the pump laser 
+populating the kerr-cavity. From the above equations we find the relation:
+\begin{equation}
+\begin{split}
+\frac{\Delta \omega}{ck} &= n_2 I \\
+\end{split}
+\end{equation}
+For a cavity mode $\lambda/{n_0} \approx 1550 \:\mathrm{nm}$, with a 
+third-order susceptibility $n_2 \approx 1.15 \times 10^{-12}
+\:\mathrm{cm}^2/\mathrm{W}$, \cite{qin2010design} the desired blockade effect 
+can be achieved for a single-photon state whose resonance is shifted by
+$\Delta\omega \approx \Gamma$, if the local intensity $I \ge $, which is
+the regime of a faint laser beam whose coherent state could have an average 
+photon-number in the range $\mu = 1-4$. This is advantageous because the 
+desired blockade effect could be achieved with a faint laser beam or with a 
+kerr-cavity of much smaller third-order suceptibily.
 
-A characteristic of this nonlinear plasmonic-photonic system is the cavity photon-number 
-dependent Fano resonance, with a sharp resonant peak and anti-resonant dip corresponding 
-to an enhanced and diminished plasmon absorption cross-section (see figure). At the 
-anti-resonant frequency of diminished plasmon absorption, there is a transmision of 
-photon into the cavity. Thus, a pump laser exciting the plasmon at the anti-resonance 
-would yield, ideally, a single-photon occupation in the cavity; and for a non-linear 
-cavity, this single-photon occupation would result to a shift of the Fano resonance
-(see yellow curve of figure). If this shifted Fano resonance (of the cavity mode with 
-a single-photon occupation) now yields a peak of enhanced plasmon absorption that aligns 
-with the pump laser, then any subsequent photon will be absorped by the plasmon. Thus, 
-the system exhibits a blockade effect for a two-photon transition at the resonant peak
-aligned with the pump laser, however, permiting a single-photon transition at the 
-anti-resonant dip aligned with the pump laser. We set out to calculate the second order 
-correlation function of such single- and two-photon states of the proposed nonlinear 
-cavity-emitter system.
 
+\section{Model}
 We develop the system's dynamics in Heisenberg picture. Heisenberg picture is 
 suitable to calculate the quantum statistical correlation of the field of light 
 transmitted throught the kerr cavity. This field correlation can be related to 
@@ -127,8 +156,6 @@ finkelstein2016nonlinear}) to account for damping of the discrete state
 (cavity mode) of Fano resonance, and the spectral distribution derived from 
 this model is expressed in terms of Fano-parameters. \cite{fano1961effects}
 
-
-\subsection{Model}
 The Hamiltonian of the discrete kerr-cavity coupled to a broad-band emitter is
 the following $\mathcal{H} = \mathcal{H}_{a} + \mathcal{H}_{b} + 
 \mathcal{H}_{f} + \mathcal{H}_{I}$. The derived Hamiltonian $\mathcal{H}_{a}$ 
@@ -301,7 +328,7 @@ g^{(2)}_{ss}(U) &\equiv
 \end{split}
 \end{equation}
 For single-photon blockade, the photon-number in the cavity is set to one,
-such that, $\omega_c^{NL}( N_c = 1 )  = \omega_c + U$. Importantly, the
+such that, $\omega_c^{NL}( U, N_c = 1 )  = \omega_c + U$. Importantly, the
 amplitude of the Laser field to populate the bare ($N_c=0$) cavity mode 
 with a single photon at steady state is such that
 \begin{equation}
@@ -323,58 +350,19 @@ thus, it follows that
 \langle n_a \vert \: E_{Laser}^2 \: \vert n_a \rangle = n_a
     \left\vert 
     ( i\gamma_c/2 )( \omega_c - \omega_p + i\gamma_p/2 ) -g^2 
-    \right\vert
-    / g.
+    \right\vert^2
+    / g^2.
 \end{equation}
 
+\section{Previous work}
+Previous work involved the study of individual split ring resonator (SRR) 
+cavities arranged in a dimer or trimer array. ref[]  We invesitgated the 
+coupling strength between the coupled SRR dimer as a function of the
+two-dimensional in-plane rotaion (Fig. 1), and the three-dimensional 
+out-of-plane tilt (Fig 2). This study was the first to characterize the latter 
+degree of freedom, where we found that...
 
-\subsection{Analysis}
-The two-photon blockade effect depends on the Fano resonance shift induced by the kerr 
-cavity. The system is designed such that a monochromatic pump laser aligns with the 
-anti-resonant frequency (corresponding to a diminished plasmon absorption) of a 
-single-photon transition but aligns with the resonat frequency (corresponding to an 
-enhanced plasmon absorption) of a two-photon transition; the former state transmits into 
-the cavity while latter state is absorped by the plasmon. Thus the degree of nonlinearity 
-depends on the line-width between the anti-resonant dip and the resonant peak of the 
-Fano line-shape, such that,
-\begin{equation}
-\begin{split}
-\lambda_1 - \lambda_2 &= \lambda_1 - (\lambda_1 + 2\pi c / \Gamma )
-\\
-\Delta\lambda &= 2\pi c / \Gamma
-\end{split}
-\end{equation}
-where $\Gamma$, the FWHM, is approximately equal to the line-width between the 
-anti-resonant dip and the resonant peak of the Fano-lineshape; $\lambda_1$ and 
-$\lambda_2$ are the wavelengths of the modes associated with the single- and two-photon
-transitions, respectively.  Assuming the whispering-gallery modes of the torodial 
-kerr-cavity as standing waves, then $\lambda_{1,2}/n_{1,2} = 2L/m$, where $n_2$
-is the refractive index of the kerr-cavity \cite{spillane2002ultralow}:
-\begin{equation}
-\begin{split}
-n_2 &= n_1 + \Delta n I
-\\
-&= n_1 + \frac{3 \chi^{(3)}}{8 n_1 c\epsilon_0} I.
-\end{split}
-\end{equation}
-
-The kerr effect is induced by the local intensity $I$ from the pump laser populating
-the kerr-cavity. From the above equations we find the relation:
-\begin{equation}
-\begin{split}
-\frac{\Delta \lambda}{\lambda_1 / n_1} &= \Delta n I \\
-&= \frac{3 \chi^{(3)}}{8 n_1 c\epsilon_0} I
-\end{split}
-\end{equation}
-For a pump laser operating at an intensity $\approx 80 \:\mathrm{GW/cm^{2}}$, with 
-a third order susceptibility $\approx 1.15 \times 10^{-12} \:\mathrm{cm}^2/\mathrm{W}$, 
-\cite{qin2010design} and for a cavity mode $\lambda_{1}/{n_1} \approx 1550 \:\mathrm{nm}$, the desired blockade effect can be achieved for a two-photon state whose resonance is 
-shifted by $\Delta\lambda \approx $. This value serves as an upper bound since the 
-fano-lineshape has a narrow line-width on the order of an attometer. This is advantageous
-because the desired blockade effect could be achieved for a kerr-cavity with a much 
-smaller third order suceptibily and a faint laser beam (whose coherent state could have 
-an average photon-number in the range $\mu = 1-4$).
-
+This work is currently under review at ACS Optical Applied Materials.
 
 \newpage
 \bibliography{ref_database}
