@@ -112,6 +112,20 @@ SM~Spillane, TJ~Kippenberg, and KJ~Vahala.
   microcavity.
 \newblock {\em Nature}, 415(6872):621--623, 2002.
 
+\bibitem{heylman2013photothermal}
+Kevin~D Heylman and Randall~H Goldsmith.
+\newblock Photothermal mapping and free-space laser tuning of toroidal optical
+  microcavities.
+\newblock {\em Applied Physics Letters}, 103(21):211116, 2013.
+
+\bibitem{al2008characterization}
+Salim Al-Kathiri, Wajdi Al-Khateeb, Mohd Hafizulfika, Mohamed~Ridza Wahiddin,
+  and Suhairi Saharudin.
+\newblock Characterization of mean photon number for key distribution system
+  using faint laser.
+\newblock In {\em 2008 International Conference on Computer and Communication
+  Engineering}, pages 1237--1242. IEEE, 2008.
+
 \bibitem{scully1999quantum}
 Marlan~O Scully and M~Suhail Zubairy.
 \newblock Quantum optics, 1999.
@@ -142,6 +156,11 @@ Ugo Fano.
 John~David Jackson.
 \newblock Classical electrodynamics, 1999.
 
+\bibitem{hillery1984quantization}
+Mark Hillery and Leonard~D Mlodinow.
+\newblock Quantization of electrodynamics in nonlinear dielectric media.
+\newblock {\em Physical Review A}, 30(4):1860, 1984.
+
 \bibitem{butcher1990elements}
 Paul~N Butcher and David Cotter.
 \newblock The elements of nonlinear optics, 1990.
@@ -150,5 +169,13 @@ Paul~N Butcher and David Cotter.
 Niket Thakkar, Charles Cherqui, and David~J Masiello.
 \newblock Quantum beats from entangled localized surface plasmons.
 \newblock {\em ACS Photonics}, 2(1):157--164, 2015.
+
+\bibitem{pakeltis2019focused}
+Grace Pakeltis, Zhongwei Hu, Austin~G Nixon, Eva Mutunga, C~Praise Anyanwu,
+  Claire~A West, Juan~Carlos Idrobo, Harald Plank, David~J Masiello, Jason~D
+  Fowlkes, et~al.
+\newblock Focused electron beam induced deposition synthesis of 3d photonic and
+  magnetic nanoresonators.
+\newblock {\em ACS Applied Nano Materials}, 2(12):8075--8082, 2019.
 
 \end{thebibliography}
