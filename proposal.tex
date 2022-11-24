@@ -24,7 +24,7 @@ Coupled to a Quantum Emitter}
 
 \newpage
 \section{Introduction}
-Encoding information in the quantum state of a single photon (using degrees
+Encoding information in the state of a single photon (using degrees
 of freedom of polarization, momentum, or energy) is highly desirable in 
 secure quantum communication since photons travel at the speed of light and 
 interact weakly with the environment over long distances.
@@ -56,7 +56,7 @@ care must be taken for less deterministic sources in order to avoid
 generating multiple pairs of photons. Herein, we propose a theoretical 
 basis for a novel single-photon source that circumvents both 
 ion-trapping at ultra-cold temperatures and the need for strong 
-coupling. The measure of the system's single-photon nature is based on 
+coupling. The measure of this system's single-photon nature is based on 
 the calculated second order correlation function of transmitted light.
 
 Consider the following system: a high-Q cavity coupled to a broad-band 
@@ -111,7 +111,7 @@ the resonant peak of the Fano Profile), then the system experiences a
 single-photon blockade, as shown in the calculated $g^{(2)}_{ss}$ (Fig. 1c) 
 of light transmitted through the cavity at steady state. Thus the single-photon 
 blockade effect depends on the Fano resonance shift $\Delta\omega$ induced by the 
-Kerr-cavity's non-linearity, where the degree of nonlinearity that induces the 
+Kerr-cavity's nonlinearity, where the degree of nonlinearity that induces the 
 shift $\Delta\omega$ is proportional to $\Gamma$, such that,
 \begin{equation}
 \begin{split}
@@ -152,7 +152,7 @@ a faint laser beam or with a kerr-cavity of much smaller $n_2$.
 \section{Model}
 We develop the system's dynamics in Heisenberg picture. Heisenberg picture is 
 suitable to calculate the quantum statistical correlation of the field of light 
-transmitted through the Kerr cavity. This field correlation can be related to 
+transmitted through the Kerr-cavity. This field correlation can be related to 
 the experimentally observed spectral distribution, using the spectral response 
 function. \cite{scully1999quantum} Moreover, in the Heisenberg picture the 
 dynamics of the quantum transverse field is analogous to the classical 
@@ -163,8 +163,8 @@ using Heisenberg-Langevin formalism. In so doing, this model provides a simple
 yet rigorous quantum approach (complementing the Louivillian formalism in the
 Linblad form, recently developed in Ref. \cite{finkelstein2015fano, 
 finkelstein2016nonlinear}) to account for damping of the discrete state 
-(cavity mode) of Fano resonance, and the spectral distribution derived from 
-this model is expressed in terms of Fano-parameters. \cite{fano1961effects}
+(cavity mode) in Fano resonance. The spectral distribution derived from 
+this model is also tied back to the orginal Fano system. \cite{fano1961effects}
 
 The Hamiltonian of the discrete Kerr-cavity coupled to a broad-band emitter is
 the following: $\mathcal{H} = \mathcal{H}_{a} + \mathcal{H}_{b} + 
@@ -191,8 +191,7 @@ is the energy of a single-mode dielectric Kerr-cavity in free space
 where $3/4\mathbf{\chi}^{(3)}$ is the higher order nonlinear susceptibility of
 a Kerr-cavity \cite{butcher1990elements}, and the quantized field $\mathbf{E}$
 is normalized with respect to the cavity's mode volume $V$. In the rotating
-wave approximation (and for a linear polarization), $\mathcal{H}_{a}$
-simplifies as follows
+wave approximation, $\mathcal{H}_{a}$ simplifies as follows
 \begin{equation}
 \begin{split}
 \mathcal{H}_{a} &= \pi\hbar\omega_k \Big(
@@ -212,9 +211,9 @@ where $\mathcal{E} = \sqrt{2\pi \hbar \omega_k / V }$ is the amplitude of the
 quantized field.
 
 The first-order approximation in Eq. (5) linearizes the nonlinear term.
-This is based on the motivation that the resonant frequency of a kerr-cavity
-changes as a function of intensity $|\mathbf{E}|^2$. In this case, the resonant
-frequency depends on the average photon-number in the Kerr-cavity:
+This is based on the motivation that the resonant frequency of a Kerr-cavity
+changes as a function of the local intensity $|\mathbf{E}|^2$. In this case, 
+the resonant frequency depends on the average photon-number in the Kerr-cavity:
 \begin{equation}
 \omega_c^{NL}( N_c = \langle a^{\dagger}a \rangle )  = \omega_c + UN_c.
 \end{equation}
@@ -260,15 +259,16 @@ has assumed an evacuated initial reservoir state.)
 
 In the experiment, the broad-band mode is driven by the external
 field of a monochromatic laser operating at $\omega$. The spectral 
-distribution is derived from the spectral response function, such that,
+distribution of the system is derived from the appropriate spectral response 
+function: 
 \begin{equation}
 S(\omega) = \frac{1}{\pi} \int_0^{\infty} \mathrm{d}\tau \: 
     e^{i \omega \tau} 
     \langle b^{\dagger}(t_0=0) \: b(t_0 + \tau) \rangle.
 \end{equation}
-We find that the spectral response function can be interpreted as the steady 
-state solution of the average photon-number in the broad-band mode rotating 
-in the frame of the drive frequency, i.e.
+Here, we find that the spectral response function can be interpreted 
+as the steady state solution of the average photon-number in system
+rotating in the frame of the drive frequency, e.g., for the broad-band mode
 \begin{align}
 S(\omega) &= \langle \tilde{b}^{\dagger}_{ss}\tilde{b}_{ss} \rangle
 \\
@@ -281,7 +281,7 @@ S(\omega) &= \langle \tilde{b}^{\dagger}_{ss}\tilde{b}_{ss} \rangle
     -i ( \omega_p - i\gamma_p/2 ) b_{ss} - ig a_{ss}
     + iE_{Laser}( e^{i \omega_L t} - e^{-i \omega_L t} ).
 \end{align}
-and $E_{Laser}$ is the amplitude of the monochromatic laser operating at
+where $E_{Laser}$ is the amplitude of the monochromatic laser operating at
 a drive frequency $\omega = \omega_L$. The reduced spectral response yields
 \begin{equation}
 \begin{split}
@@ -406,7 +406,7 @@ exploring both the two-dimensional in-plane rotaion $\phi$
 %Graphical TOC
 \begin{figure}[H]
   \begin{center}
-    \includegraphics[scale=1.0]{./cavity_study/toc_graphicv4.pdf}
+    \includegraphics[scale=1.0]{./toc_graphicv4.pdf}
   \end{center}
   \caption{Graphical TOC: This work is currently under review at 
   ACS Optical Applied Materials.}
