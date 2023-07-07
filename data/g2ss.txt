@@ -1,0 +1,2 @@
+g2 dynamics at tau=0
+t [tau_c]    g2 [1]      
