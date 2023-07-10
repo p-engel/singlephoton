@@ -4,7 +4,6 @@ coupled to a lossy boson that is classically driven
 """
 
 
-import json
 import numpy as np
 
 from property import Properties
@@ -40,17 +39,17 @@ tau = t
 # print(g2)
 # g2, _, _ = Properties(Omegac+(0*Gamc), t, np.array([tau[0]])).computeg2()
 # g2 = g2[:,0]  # for tau = 0
-g2, _, _ = Properties(Omegac+(4*Gamc), t, np.array([0]), na=1).computeg2_equaltime()
+g2, _, _ = Properties(Omegac+(0*Gamc), t, np.array([0]), na=1).computeg2_equaltime()
 # output
-with open("g2det.txt", "w", encoding="utf-8") as f:
-	f.write('g2 dynamics at tau=0, w=Ωc+4gamc\n')
+with open("g2.txt", "w", encoding="utf-8") as f:
+	f.write('g2 dynamics at tau=0, vacuum initial state, w=Ωc\n')
+    # f.write('g2 dynamics at tau=0, w=Ωc+4gamc\n')
 	f.write('{0:12s} {1:12s}\n'.format('t [ps]', 'g2 [1]'))
 	# f.write('{0:12s} {1:12s}\n'.format('t [tau_c]', 'g2 [1]'))
 	for t_idx, time in enumerate(t):
 		x = time*hbar_eV*1e+12; y = g2[t_idx].real
 		f.write('{0:<12.6f} {1:<12.6f}\n'.format(x, y))
 		# f.write('{0:<12.6f} {1:<12.6f}\n'.format(time/tau_c, g2[t_idx].real))
-	# json.dump(datstore, f)
 
 
 

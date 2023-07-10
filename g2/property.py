@@ -17,7 +17,7 @@ from system import MasterEquation, InitialState
 # class SecondOrderCorrelation:
 class Properties:
 	""" Define parameters, system, and state"""
-	def __init__(self, w, t, tau, na=1):
+	def __init__(self, w, t, tau, na=0):
 		self.w = w								# drive frequency [eV]
 		self.t = t								# time [s]
 		self.tau = tau							# delay times >= 0 [s]
