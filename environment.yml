@@ -1,0 +1,9 @@
+name: singlephoton
+channels:
+  - defaults
+dependencies:
+  - python
+  - matplotlib
+  - mpmath
+  - nose
+prefix: /Users/praizanyanwu/Documents/python/miniconda/envs/singlephoton
