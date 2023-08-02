@@ -22,7 +22,7 @@ class MasterEquation:
 		self.game = (67.5e-3) / self.hbar			# dissipative rate [rad/s]
 		self.gamc = 6.075e-10 * self.game
 		self.g = 0.332e-3 / self.hbar				# coupling constant [rad/s]
-		self.v = 0.002355 * 2*self.game					# drive amplitude [eV/hbar]
+		self.v = 1*0.002355 * 2*self.game					# drive amplitude [eV/hbar]
 		self.w = w / self.hbar						# drive frequency [rad/s]
 		self.N = 9					 				# levels in Hilbert space
 
@@ -46,13 +46,14 @@ class MasterEquation:
 
 class InitialState:
 	"""The initial state of cavity and emitter"""
-	def __init__(self, na):
+	def __init__(self, na, nb):
 		self.na = na		# initial cavity fock-state number
+		self.nb = nb		# initial emitter fock-state number
 		self.N = 9			# levels in Hilbert space
 
 	def rho(self):
 		"""define initial state of cavity and emitter"""
-		rho0 = tensor(basis(self.N, self.na), basis(self.N, 0))
+		rho0 = tensor(basis(self.N, self.na), basis(self.N, self.nb))
 
 		return rho0
 

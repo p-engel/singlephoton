@@ -17,13 +17,14 @@ from system import MasterEquation, InitialState
 # class SecondOrderCorrelation:
 class Properties:
 	""" Define parameters, system, and state"""
-	def __init__(self, w, t, tau, na=0):
+	def __init__(self, w, t, tau, na=0, nb=0):
 		self.w = w								# drive frequency [eV]
 		self.t = t								# time [s]
 		self.tau = tau							# delay times >= 0 [s]
 		self.na = na							# initial cavity fock-state number
+		self.nb = nb							# initial emitter fock-state number
 		self.lindblad = MasterEquation(self.w)
-		self.state = InitialState(self.na)
+		self.state = InitialState(self.na, self.nb)
 
 	def denomg2(self):
 		"""
@@ -74,18 +75,20 @@ class Properties:
 	    The solver only works for positive time differences and 
 	    the correlator require positive tau
 	    """
-	    H, c_ops, a, _ = self.lindblad.operators()
+	    H, c_ops, a, b = self.lindblad.operators()
 	    rho0 = self.state.rho()
-	    a_op = a.dag()
-	    b_op = a.dag()*a
-	    c_op = a
 
-	    n = mesolve(H, rho0, self.t, c_ops, [a_op*c_op]).expect[0]
-	    G2_of_zero = _correlation_me_2t(H, rho0, self.t, [0], 
-			c_ops, a_op, b_op, c_op)
-	    g2_of_zero = G2_of_zero[:,0] / (n*n)
+	    na = mesolve(H, rho0, self.t, c_ops, [a.dag()*a]).expect[0]
+	    nb = mesolve(H, rho0, self.t, c_ops, [b.dag()*b]).expect[0]
 
-	    return g2_of_zero, G2_of_zero[:,0], n*n
+	    G2_tau0_a = _correlation_me_2t(H, rho0, self.t, [0], 
+			c_ops, a.dag(), a.dag()*a, a)
+	    g2_tau0_a = G2_tau0_a[:,0] / (na*na)
+	    G2_tau0_b = _correlation_me_2t(H, rho0, self.t, [0], 
+			c_ops, b.dag(), b.dag()*b, b)
+	    g2_tau0_b = G2_tau0_b[:,0] / (nb*nb)
+
+	    return g2_tau0_a, g2_tau0_b, na, nb
 
 
 ## eighty five characters in a line
