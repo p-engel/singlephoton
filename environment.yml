@@ -6,4 +6,9 @@ dependencies:
   - matplotlib
   - mpmath
   - nose
+  - pip:
+    - mpmath==1.2.1
+    - qutip==4.7.1
+    - scipy==1.10.1
+    - wheel==0.37.1
 prefix: /Users/praizanyanwu/Documents/python/miniconda/envs/singlephoton
